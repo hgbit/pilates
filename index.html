@@ -46,6 +46,10 @@
 <body>
 <!--/main-header-->
 <!--/banner-section-->
+<div class="qrcode">
+    <img src="images/qrcode.png">
+</div>
+
 <div class="w3layouts-top-strip">
     <div class="top-srip-agileinfo">
         <!-- <div class="w3ls-social-icons text-left">
@@ -61,8 +65,8 @@
                 <!-- <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i> +090 480 088</li>
                 <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">mail@example.com</a></li> -->
 
-                <li><img src="images/weibo.png" height="25px" width="25px" alt="service-img"></li>
-                <li><img src="images/wechat.png" height="25px" width="25px" alt="service-img"></li>
+                <li><img class="weibo" src="images/weibo.png" height="25px" width="25px" alt="service-img"></li>
+                <li><img class="weixin" src="images/wechat.png" height="25px" width="25px" alt="service-img"></li>
 
                 <li><a class="langzh">中文</a> | <a class="langen">ENGLISH</a></li>
             </ul>
@@ -297,6 +301,18 @@
 
         $(document).on('click', '.langen', function () {
             window.location.href = "index.html";
+        });
+
+        $(".weixin").on('mouseover',function(){
+            $(".qrcode").css("display","block");
+        });
+
+        $(".weixin").on('mouseout',function(){
+            $(".qrcode").css("display","none");
+        });
+
+        $(document).on('click', '.weibo', function () {
+            window.open("https://weibo.com/bjsjtw?refer_flag=0000015010_&from=feed&loc=nickname&is_all=1");
         });
     });
 </script>

@@ -104,6 +104,10 @@ input[type="submit"], .w3l_header_left ul li a, .related-post-right h4 a, .comme
     color: #e51c23;
 }
 
+.agileits-contact-info ul li img:hover {
+    cursor: pointer;
+}
+
 .w3layouts-top-strip {
     background: #1a1a1a;
     padding: 0.5em 1em;
@@ -4886,3 +4890,16 @@ a.icon.gp {
 }
 
 /*-- //responsive --*/
+
+.qrcode {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    z-index: 99;
+    display: none;
+}
+
+.qrcode > img {
+    height: 100px;
+    width: 100px;
+}

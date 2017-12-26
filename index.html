@@ -18,12 +18,30 @@
     <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property=""/>
     <link rel="stylesheet" type="text/css" href="css/zoomslider.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link href="css/font-awesome.css" rel="stylesheet">
+    <!--<link href="css/font-awesome.css" rel="stylesheet">-->
     <script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
     <!--/web-fonts-->
-    <link href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <!--<link href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600" rel="stylesheet">-->
+    <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">-->
     <!--//web-fonts-->
+
+    <script type="text/javascript" src="js/language.js"></script>
+
+    <script>
+        function getUrlParam(name)
+        {
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r!=null) return unescape(r[2]); return null; //返回参数值
+        }
+
+        var lang_index = 0;
+        var lang = getUrlParam('lang');
+        if ("zh" == lang) {
+            lang_index = 1;
+        }
+    </script>
+
 </head>
 <body>
 <!--/main-header-->
@@ -46,7 +64,7 @@
                 <li><img src="images/weibo.png" height="25px" width="25px" alt="service-img"></li>
                 <li><img src="images/wechat.png" height="25px" width="25px" alt="service-img"></li>
 
-                <li>中文 | ENGLISH</li>
+                <li><a class="langzh">中文</a> | <a class="langen">ENGLISH</a></li>
             </ul>
         </div>
         <div class="clearfix"></div>
@@ -95,11 +113,19 @@
                             </li>
                             <li class="dropdown">
                                 <a href="codes.html" class="dropdown-toggle hvr-bounce-to-bottom" data-hover="Pages"
-                                   data-toggle="dropdown" aria-expanded="false">Studios <b class="caret"></b></a>
+                                   data-toggle="dropdown" aria-expanded="false">
+                                    <script>document.write(studio[lang_index])</script>
+                                    <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="http://www.baidu.com">Chaoyang Park</a></li>
-                                    <li><a href="http://www.baidu.com">Dongzhimen</a></li>
-                                    <li><a href="http://www.baidu.com">MoMA</a></li>
+                                    <li><a href="http://www.baidu.com">
+                                        <script>document.write(studio_li_1[lang_index])</script>
+                                    </a></li>
+                                    <li><a href="http://www.baidu.com">
+                                        <script>document.write(studio_li_2[lang_index])</script>
+                                    </a></li>
+                                    <li><a href="http://www.baidu.com">
+                                        <script>document.write(studio_li_3[lang_index])</script>
+                                    </a></li>
                                 </ul>
                             </li>
                             <!-- <li><img src="images/platlogo.png" height="100px" width="100px" alt="service-img"></li> -->
@@ -136,9 +162,6 @@
                 Lorem ipsum dolor sit amet.Lorem Ipsum is simply dummy text of the printing and typesetting industry
             </p>
         </div>
-
-
-
 
         <!-- services -->
         <div class="w3_agileits_services_grids">
@@ -198,8 +221,9 @@
 <div class="w3agile_footer_copy">
     <p>Copyright © 2018. Real Pilates</p>
 </div>
-<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover"
-                                                                         style="opacity: 1;"> </span></a>
+<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <!-- Dropdown-Menu-JavaScript -->
 <script>
@@ -227,7 +251,7 @@
 <script src="js/simplePlayer.js"></script>
 <script>
     $("document").ready(function () {
-        $("#video").simplePlayer();
+        //$("#video").simplePlayer();
     });
 </script>
 <!-- flexSlider -->
@@ -265,17 +289,15 @@
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
-        /*
-        var defaults = {
-              containerID: 'toTop', // fading element id
-            containerHoverID: 'toTopHover', // fading element hover id
-            scrollSpeed: 1200,
-            easingType: 'linear'
-         };
-        */
 
-        $().UItoTop({easingType: 'easeOutQuart'});
+        $(document).on('click', '.langzh', function () {
+            lang_flag = 0;
+            window.location.href = "index.html?lang=zh";
+        });
 
+        $(document).on('click', '.langen', function () {
+            window.location.href = "index.html";
+        });
     });
 </script>
 <!--end-smooth-scrolling-->

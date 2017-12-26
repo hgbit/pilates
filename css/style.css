@@ -97,10 +97,11 @@ input[type="submit"], .w3l_header_left ul li a, .related-post-right h4 a, .comme
 .agileits-contact-info ul li a {
     color: #fff;
     vertical-align: text-bottom;
+    cursor:pointer;
 }
 
 .agileits-contact-info ul li a:hover {
-    color: #2baf2b;
+    color: #e51c23;
 }
 
 .w3layouts-top-strip {

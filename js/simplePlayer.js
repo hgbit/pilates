@@ -11,9 +11,9 @@ window.onYouTubeIframeAPIReady = function() {
 		cache: true
 	});
 
-	$.getScript( "https://www.youtube.com/iframe_api")
-		.done(function( script, textStatus ) {
-	});
+	// $.getScript( "https://www.youtube.com/iframe_api")
+	// 	.done(function( script, textStatus ) {
+	// });
 
 	$.fn.simplePlayer = function() {
 

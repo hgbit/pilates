@@ -1,6 +1,6 @@
 html, body {
     font-size: 100%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Proximanova-Bold", "Helvetica Neue", Helvetica, "HelveticaNeue-Light", "Helvetica Neue Light", Arial, "Lucida Grande", sans-serif;
     background: #ffffff;
     margin: 0px !important;
 }
@@ -47,6 +47,9 @@ input[type="submit"], .w3l_header_left ul li a, .related-post-right h4 a, .comme
 .w3ls-social-icons {
     float: left;
     width: 33.333%;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 4px;
 }
 
 .w3ls-social-icons i {
@@ -97,7 +100,7 @@ input[type="submit"], .w3l_header_left ul li a, .related-post-right h4 a, .comme
 .agileits-contact-info ul li a {
     color: #fff;
     vertical-align: text-bottom;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .agileits-contact-info ul li a:hover {
@@ -109,7 +112,7 @@ input[type="submit"], .w3l_header_left ul li a, .related-post-right h4 a, .comme
 }
 
 .w3layouts-top-strip {
-    background: #1a1a1a;
+    background: #3E3D3D;
     padding: 0.5em 1em;
 }
 
@@ -2734,7 +2737,7 @@ h3.tittle, h2.w3l-inner-h-title, h3.w3l-inner-h-title {
 /*-- //single --*/
 .w3agile_footer_copy {
     text-align: center;
-    background: #1a1a1a;
+    background: #3E3D3D;
     padding: 1em 0;
 }
 

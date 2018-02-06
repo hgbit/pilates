@@ -30,14 +30,16 @@
 			width:18px;
 			height:18px;
 			margin: 10px;
-			background:#ff401b;
+			/*background:#ff401b;*/
+			background:#EEE5DE;
 			border-radius:50%;
 			-webkit-border-radius:50%;
 			-moz-border-radius:50%;
 			-o-border-radius:50%;
 		}
 		.zs-enabled .zs-slideshow .zs-bullets .zs-bullet.active {
-			background:#00acee;
+			/*background:#00acee;*/
+			background:#D7A26B;
 			border:4px solid #fff;
 		}
       #demo-1 {

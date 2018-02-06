@@ -1,4 +1,4 @@
-var studio = ['STUDIOS', '办事处'];
-var studio_li_1 = ['Chaoyang Park', '朝阳公园'];
-var studio_li_2 = ['Dongzhimen', '东直门'];
-var studio_li_3 = ['MoMA', '摩玛'];
+var studio = ['工作室','STUDIOS' ];
+var studio_li_1 = ['朝阳公园', 'Chaoyang Park'];
+var studio_li_2 = [ '东直门','Dongzhimen'];
+var studio_li_3 = ['摩玛', 'MoMA'];

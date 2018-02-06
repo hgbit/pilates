@@ -53,6 +53,10 @@
     <img src="images/qrcode.png">
 </div>
 
+<div class="encomming">
+    <img src="images/encomming.png">
+</div>
+
 <div class="w3layouts-top-strip">
     <div class="top-srip-agileinfo">
         <div class="w3ls-social-icons text-left">
@@ -297,7 +301,11 @@
         });
 
         $(document).on('click', '.langen', function () {
-            window.location.href = "index.html";
+            // window.location.href = "index.html";
+            $(".encomming").css("display", "block");
+            setTimeout(function(){
+                $(".encomming").css("display", "none");
+            }, 2000);
         });
 
         $(".weixin").on('mouseover', function () {
